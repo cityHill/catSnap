@@ -1,0 +1,3 @@
+rootProject.name = 'catsnap'
+
+include ':app'
