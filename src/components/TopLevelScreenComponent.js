@@ -1,10 +1,10 @@
 import React from 'react'
 import {
-    StyleSheet,
     Text,
     View,
     Button
 } from 'react-native'
+import reactCSS from 'reactcss'
 
 
 class TopLevelScreenComponent extends React.Component {
@@ -16,10 +16,16 @@ class TopLevelScreenComponent extends React.Component {
     }
 
     render() {
-
+        const styles = reactCSS({
+            'default': {
+                container: {
+                  display: 'flex',
+                }
+            },
+    })
         return (
             <View style={styles.container}>
-               Catsnap
+               <Text> Catsnap </Text>
             </View>
         )
     }

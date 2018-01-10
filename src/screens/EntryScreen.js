@@ -3,6 +3,7 @@ import TopLevelScreenComponent from './../components/TopLevelScreenComponent'
 import {
     View,
 } from 'react-native'
+import reactCSS from 'reactcss'
 
 class EntryScreen extends React.Component {
     constructor(props, context) {
@@ -12,7 +13,13 @@ class EntryScreen extends React.Component {
     }
 
     render() {
-
+        const styles = reactCSS({
+            'default': {
+                container: {
+                  display: 'flex',
+                }
+            },
+    })
         return (
             <View style={styles.container}>
                 <TopLevelScreenComponent/>
