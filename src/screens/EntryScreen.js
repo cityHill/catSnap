@@ -16,7 +16,8 @@ class EntryScreen extends React.Component {
         const styles = reactCSS({
             'default': {
                 container: {
-                  display: 'flex',
+                  //display: 'flex'
+                  flex: 1
                 }
             },
     })
