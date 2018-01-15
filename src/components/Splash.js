@@ -28,37 +28,31 @@ class Splash extends React.Component {
         const styles = reactCSS({
             'default': {
                 container: {
-                    //display: 'flex'
-                    flex: 1
+                    flex: 1,
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center'
                 },
                 csLogo: {
-                    position: 'absolute',
-                    top: 200,
-                    left: 400,
                     width: 100,
-                    height: 100
+                    height: 100,
                 },
                 splashText: {
                     fontSize: 18,
                     color: '#EE0C97',
                     fontWeight: 'bold',
-                    position: 'absolute',
-                    top: 350,
-                    left: 360
+                    paddingBottom: 20
                 },
                 buttonText: {
                     color: '#841584',
                     fontSize: 18,
                     fontWeight: 'bold',
-                    position: 'absolute',
-                    top: 450,
-                    left: 375,
                     width: 150,
                     height: 30,
                     backgroundColor: 'lightgrey',
-                    textAlign: 'center'
+                    textAlign: 'center',
                 }
-            },
+            }
         })
         return (
             <View style={styles.container}>
