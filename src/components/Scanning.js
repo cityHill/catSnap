@@ -4,7 +4,8 @@ import {
     View,
     Button,
     TouchableOpacity,
-    Image
+    Image,
+    StyleSheet
 } from 'react-native'
 import reactCSS from 'reactcss'
 import Images from '../assets/images/images'
@@ -27,36 +28,41 @@ class Scanning extends React.Component {
     }
 
     render() {
+
         const styles = reactCSS({
             'default': {
                 container: {
-                    //display: 'flex',
-                    flex: 1
+                    flex: 1,
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                },
+                scanTitle: {
+                    fontSize: 40,
+                    color: 'black',
+                    textAlign: 'center'
                 },
                 scanCat: {
-                    position: 'absolute',
-                    top: 100,
-                    left: 200,
                     width: 480,
-                    height: 360
+                    height: 360,
+                    alignSelf: 'center',
                 },
                 backText: {
                     fontSize: 24,
                     color: '#EE0C97',
                     fontWeight: 'bold',
-                    position: 'absolute',
-                    top: 450,
-                    left: 100,
                     width: 150,
                     height: 50,
                     backgroundColor: 'lightgrey',
-                    textAlign: 'center'
-
+                    textAlign: 'center',
+                    alignSelf: 'flex-start'
                 }
-            },
-        })
+            }
+        }
+        )
+
         return (
             <View style={styles.container}>
+                <Text style={styles.scanTitle}> Scanning for a cat... </Text>
                 <TouchableOpacity onPress={this.forward}>
                     <Image style={styles.scanCat} resizeMode="contain" source={Images.SCAN_CAT} />
                 </TouchableOpacity>

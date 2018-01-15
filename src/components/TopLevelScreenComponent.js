@@ -35,8 +35,8 @@ class TopLevelScreenComponent extends React.Component {
         const styles = reactCSS({
             'default': {
                 container: {
-                    //display: 'flex'
-                    flex: 1
+                    flex: 1,
+                    //justifyContent: 'space-between'                        
                 }
             },
         })

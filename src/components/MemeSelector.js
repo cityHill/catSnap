@@ -27,13 +27,17 @@ class MemeSelector extends React.Component {
         const styles = reactCSS({
             'default': {
                 container: {
-                  //display: 'flex',
-                  flex: 1
+                  flex: 1,
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  alignContent: 'center'
+                },
+                memeTitle: {
+                    fontSize: 40,
+                    color: 'black'
                 },
                 tlCat: {
-                    position: 'absolute',
-                    top: 100,
-                    left: 200,
                     width: 480,
                     height: 360
                 },
@@ -41,9 +45,6 @@ class MemeSelector extends React.Component {
                     fontSize: 24,
                     color: '#EE0C97',
                     fontWeight: 'bold',
-                    position: 'absolute',
-                    top: 450,
-                    left: 400,
                     width: 150,
                     height: 30,
                     backgroundColor: 'lightgrey',
@@ -53,8 +54,9 @@ class MemeSelector extends React.Component {
     })
         return (
             <View style={styles.container}>
-            <TouchableOpacity onPress={this.onPress}>
+                <Text style={styles.memeTitle}> Select Your Meme </Text>
                 <Image style={styles.tlCat} resizeMode="contain" source={Images.TL_CAT} />
+                <TouchableOpacity onPress={this.onPress}>
                 <Text style={styles.selectorText}>Thug Life</Text>
                 </TouchableOpacity>
             </View>

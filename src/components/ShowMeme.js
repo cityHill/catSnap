@@ -27,27 +27,24 @@ class ShowMeme extends React.Component {
         const styles = reactCSS({
             'default': {
                 container: {
-                    //display: 'flex',
-                    flex: 1
+                    flex: 1,
+                    flexDirection: 'column',
+                    justifyContent: 'center'
                 },
                 scanCat: {
-                    position: 'absolute',
-                    top: 100,
-                    left: 200,
                     width: 480,
-                    height: 360
+                    height: 360,
+                    alignSelf: 'center'
                 },
                 backText: {
                     fontSize: 24,
                     color: '#EE0C97',
                     fontWeight: 'bold',
-                    position: 'absolute',
-                    top: 450,
-                    left: 100,
                     width: 150,
                     height: 50,
                     backgroundColor: 'lightgrey',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    alignSelf: 'flex-start'
 
                 }
             },
