@@ -29,11 +29,19 @@ class Scanning extends React.Component {
         this.setState ({
             scanTitle: this.state.scanTitle + '.'
       })
+      if (this.state.scanTitle == 'Scanning for cat....'){
+          this.setState ({
+              scanTitle: 'Scanning for cat'
+          })
+      }
     }
 
-    stopTimer = () => {
-        setTimeout(this.stopTimer, 4000)
-    }
+    /*stopTimer = () => {
+        clearTimeout(setTimeout, 4000)
+        this.setState ({
+            scanTitle: this.state.scanTitle
+        })
+    }*/
     
     componentWillUnmount = () => {
         clearTimeout(this.state.scanTitle)
